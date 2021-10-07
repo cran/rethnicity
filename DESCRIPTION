@@ -1,7 +1,7 @@
 Package: rethnicity
 Type: Package
 Title: Predicting Ethnic Group from Names
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
     c(person(given = "Fangzhou", family = "Xie", role = c("aut", "cre"), 
     email = "fangzhou.xie@rutgers.edu", comment = c(ORCID = "0000-0001-7702-093X")))
@@ -16,11 +16,11 @@ BugReports: https://github.com/fangzhou-xie/rethnicity/issues
 Depends: R (>= 3.4.0)
 LinkingTo: Rcpp, RcppEigen, RcppThread
 Imports: Rcpp
-Suggests: knitr, rmarkdown, testthat (>= 3.0.0), magrittr
+Suggests: knitr, rmarkdown, testthat (>= 3.0.0), magrittr, parallel
 VignetteBuilder: knitr
 Config/testthat/edition: 3
 NeedsCompilation: yes
-Packaged: 2021-09-21 17:44:27 UTC; xiefangzhou
+Packaged: 2021-10-06 01:11:50 UTC; xiefangzhou
 Author: Fangzhou Xie [aut, cre] (<https://orcid.org/0000-0001-7702-093X>)
 Repository: CRAN
-Date/Publication: 2021-09-22 09:10:02 UTC
+Date/Publication: 2021-10-07 08:20:18 UTC

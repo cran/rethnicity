@@ -9,7 +9,7 @@ options(rmarkdown.html_vignette.check_title = FALSE)
 library(rethnicity)
 
 ## -----------------------------------------------------------------------------
-predict_ethnicity(lastnames = "Freeman", method = "lastname")
+predict_ethnicity(lastnames = "Jackson", method = "lastname")
 
 ## -----------------------------------------------------------------------------
 predict_ethnicity(firstnames = "Samuel", lastnames = "Jackson", method = "fullname")
@@ -21,10 +21,11 @@ predict_ethnicity(lastnames = lastnames, method = "lastname")
 predict_ethnicity(firstnames = firstnames, lastnames = lastnames, method = "fullname")
 
 ## -----------------------------------------------------------------------------
-lastnames <- rep("Freeman", 1000000)
+firstnames <- rep("Samuel", 10000)
+lastnames <- rep("Jackson", 10000)
 # measure the elapsed time
 start_time <- Sys.time()
-p <- predict_ethnicity(lastnames = lastnames, method = "lastname", threads = 20)
+p <- predict_ethnicity(firstnames = firstnames, lastnames = lastnames, threads = parallel::detectCores()-2)
 end_time <- Sys.time()
 end_time - start_time
 
