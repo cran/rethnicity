@@ -16,12 +16,10 @@
 <!-- # ) -->
 <!-- # ``` -->
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/rethnicity)](https://CRAN.R-project.org/package=rethnicity)
-[![CRAN\_Downloads](http://cranlogs.r-pkg.org/badges/grand-total/rethnicity)](https://CRAN.R-project.org/package=rethnicity)
-[![Build
-Status](https://app.travis-ci.com/fangzhou-xie/rethnicity.svg?branch=main)](https://app.travis-ci.com/github/fangzhou-xie/rethnicity)
-[![License:
-MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![R-CMD-check](https://github.com/fangzhou-xie/rethnicity/workflows/R-CMD-check/badge.svg)](https://github.com/fangzhou-xie/rethnicity/actions)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rethnicity)](https://CRAN.R-project.org/package=rethnicity)
+[![CRAN_Downloads](http://cranlogs.r-pkg.org/badges/grand-total/rethnicity)](https://CRAN.R-project.org/package=rethnicity)
+<!-- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) -->
 <!-- badges: end -->
 
 The goal of rethnicity is to provide a method to predict ethnicity from
@@ -44,7 +42,8 @@ agree to the following:
     correct, and you should be cautious about the results.
     <!-- 4. You **agree** to advocate racial equality. -->
 
-Again, you should use the package responsibly.
+Again, you should use the package responsibly and please refer to the
+[methodology paper](#documentation-on-methodology) for details.
 
 ## Installation
 
@@ -69,6 +68,26 @@ There is a
 [vignette](https://fangzhou-xie.github.io/rethnicity/articles/introduction.html)
 that discusses how to use this package.
 
+## Documentation on Methodology
+
+The complete description of the methodology is on
+[arxiv](https://arxiv.org/abs/2109.09228) and please cite it as:
+
+    @article{xie2021,
+      title = {Rethnicity: Predicting {{Ethnicity}} from {{Names}}},
+      shorttitle = {Predicting {{Ethnicity}} from {{Names}} with Rethnicity},
+      author = {Xie, Fangzhou},
+      year = {2021},
+      month = sep,
+      journal = {arXiv:2109.09228 [cs]},
+      eprint = {2109.09228},
+      eprinttype = {arxiv},
+    }
+
 ## License
 
-MIT License
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+This license was chosen to prohibit commercial usage, while still being
+free and accessible for non-commercial academic uses.
