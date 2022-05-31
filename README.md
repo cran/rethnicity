@@ -40,7 +40,8 @@ agree to the following:
     by using the methods provided by this package.
 4.  You **understand** that the method cannot make predictions 100%
     correct, and you should be cautious about the results.
-    <!-- 4. You **agree** to advocate racial equality. -->
+5.  You **will not** use the information to study individuals, but
+    rather to study populations in the aggregate.
 
 Again, you should use the package responsibly and please refer to the
 [methodology paper](#documentation-on-methodology) for details.
@@ -71,7 +72,22 @@ that discusses how to use this package.
 ## Documentation on Methodology
 
 The complete description of the methodology is on
-[arxiv](https://arxiv.org/abs/2109.09228) and please cite it as:
+[arXiv](https://arxiv.org/abs/2109.09228) and published on
+[SoftwareX](https://www.sciencedirect.com/science/article/pii/S2352711021001874)
+and please cite it as:
+
+    @article{xie2022,
+      title = {Rethnicity: {{An R}} Package for Predicting Ethnicity from Names},
+      shorttitle = {Rethnicity},
+      author = {Xie, Fangzhou},
+      year = {2022},
+      month = jan,
+      journal = {SoftwareX},
+      volume = {17},
+      pages = {100965},
+      issn = {2352-7110},
+      doi = {10.1016/j.softx.2021.100965},
+    }
 
     @article{xie2021,
       title = {Rethnicity: Predicting {{Ethnicity}} from {{Names}}},
