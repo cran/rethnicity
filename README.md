@@ -16,7 +16,7 @@
 <!-- # ) -->
 <!-- # ``` -->
 
-[![R-CMD-check](https://github.com/fangzhou-xie/rethnicity/workflows/R-CMD-check/badge.svg)](https://github.com/fangzhou-xie/rethnicity/actions)
+[![R-CMD-check](https://github.com/fangzhou-xie/rethnicity/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/fangzhou-xie/rethnicity/actions/workflows/R-CMD-check.yaml)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rethnicity)](https://CRAN.R-project.org/package=rethnicity)
 [![CRAN_Downloads](http://cranlogs.r-pkg.org/badges/grand-total/rethnicity)](https://CRAN.R-project.org/package=rethnicity)
 <!-- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) -->
@@ -48,15 +48,29 @@ Again, you should use the package responsibly and please refer to the
 
 ## Installation
 
-You can install the released version of rethnicity from
-[CRAN](https://CRAN.R-project.org) with:
+I recommend using the wonderful package manager
+[`pak`](https://github.com/r-lib/pak) to install this package:
+
+``` r
+# first install `pak` if not yet installed
+# install.packages("pak")
+
+# install the CRAN version
+pak::pkg_install("rethnicity")
+
+# or install the Github development version
+pak::pkg_install("fangzhou-xie/rethnicity")
+```
+
+Of course, you can also install the package in the old way: install the
+released version of rethnicity from [CRAN](https://CRAN.R-project.org)
+with:
 
 ``` r
 install.packages("rethnicity")
 ```
 
-You can install the development version from
-[GitHub](https://github.com/) with:
+Or the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
