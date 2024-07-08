@@ -1,4 +1,4 @@
-## ---- include = FALSE---------------------------------------------------------
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -21,8 +21,8 @@ predict_ethnicity(lastnames = lastnames, method = "lastname")
 predict_ethnicity(firstnames = firstnames, lastnames = lastnames, method = "fullname")
 
 ## -----------------------------------------------------------------------------
-firstnames <- rep("Samuel", 10000)
-lastnames <- rep("Jackson", 10000)
+firstnames <- rep("Samuel", 1000)
+lastnames <- rep("Jackson", 1000)
 # measure the elapsed time
 start_time <- Sys.time()
 p <- predict_ethnicity(firstnames = firstnames, lastnames = lastnames, threads = parallel::detectCores()-2)

@@ -12,7 +12,7 @@
 
 <meta name="author" content="Fangzhou Xie" />
 
-<meta name="date" content="2023-03-13" />
+<meta name="date" content="2024-07-07" />
 
 <title>Introduction to rethnicity package</title>
 
@@ -51,7 +51,7 @@ overflow: visible;
 </style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -341,13 +341,13 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <h1 class="title toc-ignore">Introduction to <code>rethnicity</code>
 package</h1>
 <h4 class="author">Fangzhou Xie</h4>
-<h4 class="date">March 13, 2023</h4>
+<h4 class="date">July 07, 2024</h4>
 
 
 
 <p>In this package, I aim to provide a function that could predict
 ethnicity (race) from names.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rethnicity)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(rethnicity)</span></code></pre></div>
 <div id="warning" class="section level1">
 <h1>WARNING!</h1>
 <p>I created this package hoping to help applied researchers on their
@@ -373,9 +373,9 @@ predictions 100% correct, and you should be cautious about the results.
 <h2>I want to predict ethnicity from last names!</h2>
 <p>Sure. I have trained a model to predict and classify race based on
 last names. Simply use it as:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predict_ethnicity</span>(<span class="at">lastnames =</span> <span class="st">&quot;Jackson&quot;</span>, <span class="at">method =</span> <span class="st">&quot;lastname&quot;</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   lastname prob_asian prob_black prob_hispanic prob_white  race</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1  Jackson 0.02337379  0.8985271   0.007418938 0.07068022 black</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">predict_ethnicity</span>(<span class="at">lastnames =</span> <span class="st">&quot;Jackson&quot;</span>, <span class="at">method =</span> <span class="st">&quot;lastname&quot;</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="co">#&gt;   lastname prob_asian prob_black prob_hispanic prob_white  race</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">#&gt; 1  Jackson 0.02337378  0.8985271   0.007418934 0.07068021 black</span></span></code></pre></div>
 </div>
 <div id="what-if-i-have-both-first-names-and-last-names" class="section level2">
 <h2>What if I have both first names and last names?</h2>
@@ -383,23 +383,23 @@ last names. Simply use it as:</p>
 first names and last names, we can achieve higher accuracy than only
 having last names. The syntax is similar to what we have seen from
 above.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predict_ethnicity</span>(<span class="at">firstnames =</span> <span class="st">&quot;Samuel&quot;</span>, <span class="at">lastnames =</span> <span class="st">&quot;Jackson&quot;</span>, <span class="at">method =</span> <span class="st">&quot;fullname&quot;</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   firstname lastname prob_asian prob_black prob_hispanic prob_white  race</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1    Samuel  Jackson 0.01741119  0.8898849   0.006667824  0.0860361 black</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">predict_ethnicity</span>(<span class="at">firstnames =</span> <span class="st">&quot;Samuel&quot;</span>, <span class="at">lastnames =</span> <span class="st">&quot;Jackson&quot;</span>, <span class="at">method =</span> <span class="st">&quot;fullname&quot;</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="co">#&gt;   firstname lastname prob_asian prob_black prob_hispanic prob_white  race</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt; 1    Samuel  Jackson 0.01741121  0.8898848   0.006667829 0.08603617 black</span></span></code></pre></div>
 </div>
 <div id="what-if-i-have-multiple-names" class="section level2">
 <h2>What if I have multiple names?</h2>
 <p>Cool. I got you covered. Just use vectors as input.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>firstnames <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Samuel&quot;</span>, <span class="st">&quot;Will&quot;</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>lastnames <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Jackson&quot;</span>, <span class="st">&quot;Smith&quot;</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">predict_ethnicity</span>(<span class="at">lastnames =</span> lastnames, <span class="at">method =</span> <span class="st">&quot;lastname&quot;</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   lastname prob_asian prob_black prob_hispanic prob_white  race</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1  Jackson 0.02337379  0.8985271   0.007418938 0.07068022 black</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2    Smith 0.08850799  0.5421597   0.033163066 0.33616929 black</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">predict_ethnicity</span>(<span class="at">firstnames =</span> firstnames, <span class="at">lastnames =</span> lastnames, <span class="at">method =</span> <span class="st">&quot;fullname&quot;</span>)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   firstname lastname prob_asian prob_black prob_hispanic prob_white  race</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1    Samuel  Jackson 0.01741119  0.8898849   0.006667824  0.0860361 black</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2      Will    Smith 0.04450592  0.5568276   0.007727880  0.3909386 black</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>firstnames <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Samuel&quot;</span>, <span class="st">&quot;Will&quot;</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>lastnames <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Jackson&quot;</span>, <span class="st">&quot;Smith&quot;</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="fu">predict_ethnicity</span>(<span class="at">lastnames =</span> lastnames, <span class="at">method =</span> <span class="st">&quot;lastname&quot;</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="co">#&gt;   lastname prob_asian prob_black prob_hispanic prob_white  race</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co">#&gt; 1  Jackson 0.02337378  0.8985271   0.007418934 0.07068021 black</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="co">#&gt; 2    Smith 0.08850800  0.5421596   0.033163086 0.33616930 black</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">predict_ethnicity</span>(<span class="at">firstnames =</span> firstnames, <span class="at">lastnames =</span> lastnames, <span class="at">method =</span> <span class="st">&quot;fullname&quot;</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="co">#&gt;   firstname lastname prob_asian prob_black prob_hispanic prob_white  race</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">#&gt; 1    Samuel  Jackson 0.01741121  0.8898848   0.006667829 0.08603617 black</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">#&gt; 2      Will    Smith 0.04450590  0.5568278   0.007727879 0.39093845 black</span></span></code></pre></div>
 <p>Just remember to have the same length for the <code>firstnames</code>
 and <code>lastnames</code> vectors and the first name and last name for
 the same person should have same index in each of the vectors.</p>
@@ -410,15 +410,15 @@ the same person should have same index in each of the vectors.</p>
 multi-threading via the wonderful <code>RcppThread</code> package. To
 use this, just pass a number to the <code>threads</code> argument and
 the number need to be greater than 0.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>firstnames <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="st">&quot;Samuel&quot;</span>, <span class="dv">10000</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>lastnames <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="st">&quot;Jackson&quot;</span>, <span class="dv">10000</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># measure the elapsed time</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>start_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">predict_ethnicity</span>(<span class="at">firstnames =</span> firstnames, <span class="at">lastnames =</span> lastnames, <span class="at">threads =</span> parallel<span class="sc">::</span><span class="fu">detectCores</span>()<span class="sc">-</span><span class="dv">2</span>)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Time difference of 0.6447604 secs</span></span></code></pre></div>
-<p>Processing ten thousands names only spent around 0.64 seconds for us.
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>firstnames <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="st">&quot;Samuel&quot;</span>, <span class="dv">1000</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>lastnames <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="st">&quot;Jackson&quot;</span>, <span class="dv">1000</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="co"># measure the elapsed time</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>start_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">predict_ethnicity</span>(<span class="at">firstnames =</span> firstnames, <span class="at">lastnames =</span> lastnames, <span class="at">threads =</span> parallel<span class="sc">::</span><span class="fu">detectCores</span>()<span class="sc">-</span><span class="dv">2</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="co">#&gt; Time difference of 0.06980777 secs</span></span></code></pre></div>
+<p>Processing one thousand names only spent around 0.064 seconds for us.
 I would call this pretty fast.</p>
 <p>For most use cases that I can imagine, the default setting
 (<code>threads = 0</code>) should be fast enough since we are leveraging
