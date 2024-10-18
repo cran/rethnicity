@@ -12,7 +12,7 @@
 
 <meta name="author" content="Fangzhou Xie" />
 
-<meta name="date" content="2024-07-07" />
+<meta name="date" content="2024-10-18" />
 
 <title>Using Customized Models</title>
 
@@ -62,7 +62,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
 { counter-reset: source-line 0; }
@@ -340,14 +340,21 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">Using Customized Models</h1>
 <h4 class="author">Fangzhou Xie</h4>
-<h4 class="date">July 07, 2024</h4>
+<h4 class="date">October 18, 2024</h4>
 
 
 
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(rethnicity)</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="co">#&gt; ══ </span><span class="al">WARNING</span><span class="co">! ════════════════════════════════════════════════════════════════════</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="co">#&gt; The method provided by this package has its limitations and anyone must use them cautiously and responsibly. You should also agree that you only intend to use the method for academic research purpose and not for commercial use. You would also agree NOT to discriminate anyone based on race or color or any characteristic, with the information provided by this package. Please refer to the documentation for details: https://fangzhou-xie.github.io/rethnicity/index.html</span></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co">#&gt; ════════════════════════════════════════════════════════════════════════════════</span></span></code></pre></div>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="co">#&gt; ══ </span><span class="al">WARNING</span><span class="co">: ══════════════════════════════════════════════════════ rethnicity ══</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="co">#&gt; ! This package predicts race from names, with inherent limitations and bias risks. Use cautiously.</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co">#&gt; ! Critically examine methodology and results for biases and ethical implications.</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="co">#&gt; ✖ Results should not be considered definitive and must NOT be used for discrimination of any kind.</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="co">#&gt; ✖ Intended for academic research purposes only, NOT for commercial use.</span></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="co">#&gt; ══ INFO: ═════════════════════════════════════════════════════════ rethnicity ══</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="co">#&gt; ℹ For detailed documentation, visit: rethnicity homepage (&lt;https://fangzhou-xie.github.io/rethnicity/index.html&gt;) and methodology paper (&lt;https://www.sciencedirect.com/science/article/pii/S2352711021001874&gt;).</span></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="co">#&gt; ══ CITATION: ═════════════════════════════════════════════════════ rethnicity ══</span></span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="co">#&gt; ℹ Please use `citation(&quot;rethnicity&quot;)` to cite my work, thanks!</span></span></code></pre></div>
 <div id="design-of-the-package" class="section level1">
 <h1>Design of the Package</h1>
 <p>I built this package to help applied researchers for research on

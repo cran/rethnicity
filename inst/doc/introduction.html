@@ -12,7 +12,7 @@
 
 <meta name="author" content="Fangzhou Xie" />
 
-<meta name="date" content="2024-07-07" />
+<meta name="date" content="2024-10-18" />
 
 <title>Introduction to rethnicity package</title>
 
@@ -62,7 +62,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
 { counter-reset: source-line 0; }
@@ -341,7 +341,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <h1 class="title toc-ignore">Introduction to <code>rethnicity</code>
 package</h1>
 <h4 class="author">Fangzhou Xie</h4>
-<h4 class="date">July 07, 2024</h4>
+<h4 class="date">October 18, 2024</h4>
 
 
 
@@ -417,7 +417,7 @@ the number need to be greater than 0.</p>
 <span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">predict_ethnicity</span>(<span class="at">firstnames =</span> firstnames, <span class="at">lastnames =</span> lastnames, <span class="at">threads =</span> parallel<span class="sc">::</span><span class="fu">detectCores</span>()<span class="sc">-</span><span class="dv">2</span>)</span>
 <span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="co">#&gt; Time difference of 0.06980777 secs</span></span></code></pre></div>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="co">#&gt; Time difference of 0.07338595 secs</span></span></code></pre></div>
 <p>Processing one thousand names only spent around 0.064 seconds for us.
 I would call this pretty fast.</p>
 <p>For most use cases that I can imagine, the default setting
