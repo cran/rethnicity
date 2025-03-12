@@ -1,9 +1,9 @@
 Package: rethnicity
 Type: Package
 Title: Predicting Ethnic Group from Names
-Version: 0.2.6
+Version: 0.2.7
 Authors@R: 
-    c(person(given = "Fangzhou", family = "Xie", role = c("aut", "cre"), 
+    c(person(given = "Fangzhou", family = "Xie", role = c("aut", "cre", "cph"), 
     email = "fangzhou.xie@rutgers.edu", comment = c(ORCID = "0000-0001-7702-093X")))
 Maintainer: Fangzhou Xie <fangzhou.xie@rutgers.edu>
 Description: Implementation of the race/ethnicity prediction method, described 
@@ -24,8 +24,9 @@ Suggests: pak, knitr, rmarkdown, testthat (>= 3.0.0), magrittr,
 VignetteBuilder: knitr
 Language: en-US
 Config/testthat/edition: 3
+UseLTO: TRUE
 NeedsCompilation: yes
-Packaged: 2024-10-18 13:02:21 UTC; fangzhou
-Author: Fangzhou Xie [aut, cre] (<https://orcid.org/0000-0001-7702-093X>)
+Packaged: 2025-03-12 19:57:06 UTC; fangzhou
+Author: Fangzhou Xie [aut, cre, cph] (<https://orcid.org/0000-0001-7702-093X>)
 Repository: CRAN
-Date/Publication: 2024-10-18 13:20:02 UTC
+Date/Publication: 2025-03-12 20:10:02 UTC

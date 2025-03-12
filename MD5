@@ -1,4 +1,4 @@
-2ebedf68193c7406ae54c6751ed5547a *DESCRIPTION
+50e2ccd3a46fd36fe239b6c00c942e8e *DESCRIPTION
 b1c240b67f3ea43fe9dd8d761993b90f *NAMESPACE
 90819a0d33640f36a71f4d5abc0f84d2 *NEWS.md
 1bc729689d3d55aace93bb2de689dda8 *R/RcppExports.R
@@ -7,14 +7,14 @@ b1c240b67f3ea43fe9dd8d761993b90f *NAMESPACE
 e670d82f6e548b1302d686e5e69bd7f0 *R/rethnicity.R
 68e37d3373dc7edcff1acf41d16c281a *R/zzz.R
 898a397594393bc0ca2e0ce5d6f4991c *README.md
-b2ece00cc2a99191f0677704b0785b25 *build/vignette.rds
+c187d51d3b33320440cad61f8b6a4d33 *build/vignette.rds
 bc5345f2f65b1c484d86e868ac6e58fe *inst/CITATION
 1d0df396feca4264240c440db57940fd *inst/doc/advanced_usage.R
 10e6965873af3478b654733bad443bd8 *inst/doc/advanced_usage.Rmd
-1e19d4937f1361cbdcb4d6cb7d85185c *inst/doc/advanced_usage.html
+4a5f5c0fee0767fcf2e4b1d0199e3faf *inst/doc/advanced_usage.html
 bf694db973fbea6452fa2641e0a03de7 *inst/doc/introduction.R
-a9e5c345762ab754f7d063245165b314 *inst/doc/introduction.Rmd
-4f4a89193b2dfb51d001c54fa7823746 *inst/doc/introduction.html
+b85534c5d6a241b2d15b41a421994f7d *inst/doc/introduction.Rmd
+4255bdc5e9da63cfbf4c94ab6216e5f1 *inst/doc/introduction.html
 f513eaa64743203479eea374f4b8993d *inst/include/fdeep/base64.hpp
 8fb533329e38a86bfa55c778e8db9f6d *inst/include/fdeep/common.hpp
 90cb65dd96ce311f61dd135ef89c9adf *inst/include/fdeep/convolution.hpp
@@ -83,7 +83,7 @@ aacfc2f7e171577f58695d3ea27a6dc5 *inst/include/fdeep/tensor_shape.hpp
 f5f794a0b944ed660823fca5b8479374 *inst/include/fdeep/tensor_shape_variable.hpp
 62e7895c4b29da6b39a0e93e655de897 *inst/include/fplus/fplus.hpp
 eead3f08b00bfb8080f5473006fbe99c *inst/include/fplus/fplus.hpp.bk
-140fbc67d17683708636f3480116aa1a *inst/include/nlohmann/json.hpp
+e3bdd380c929bdb94c0ecbf518afe3fe *inst/include/nlohmann/json.hpp
 a55b99ae345f8e37622edc57a7485cb6 *inst/models/fullname_aligned_distill.json
 a92e6261321021534d9fe77a0bc6a6bb *inst/models/lastname_distill.json
 4f581a7b27557b49e652da5e346475ff *man/figures/README-pressure-1.png
@@ -97,6 +97,6 @@ f02b2efc3ef141d7b31beef6617a753f *src/Makevars.win
 82e24333cf7e55e09474cc24d69eba51 *src/predict_ethnicity.cpp
 381c87a77ec356d1b89b2d5903b364f5 *src/string_to_id.h
 7737c954cd25b3a9980dae8036208ff0 *tests/testthat.R
-2752723d2ca4bced40b135004dc93eb5 *tests/testthat/test_prediction.R
+138a4c1aaad5d13f078b1959e921ec21 *tests/testthat/test_prediction.R
 10e6965873af3478b654733bad443bd8 *vignettes/advanced_usage.Rmd
-a9e5c345762ab754f7d063245165b314 *vignettes/introduction.Rmd
+b85534c5d6a241b2d15b41a421994f7d *vignettes/introduction.Rmd
